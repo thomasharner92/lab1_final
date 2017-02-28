@@ -1,5 +1,5 @@
 /* Thomas Harner
-mlb_geojson.js
+main.js
 2/27/2017
 geoJSON data source: baseball-reference statistics
 http://www.baseball-reference.com/leagues/MLB/2016-misc.shtml
