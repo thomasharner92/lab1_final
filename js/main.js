@@ -26,8 +26,17 @@ function Popup(properties, attribute, layer, radius) {
 
 function createMap() {
     // create map
-    var map = L.map('mapid').setView(new L.LatLng(39.784267, -99.592024), 4);
-    L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg').addTo(map);
+    var map = L.map('mapid').setView(new L.LatLng(37.639018, -87.981940),4); 
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.pirates',
+    accessToken: 'pk.eyJ1IjoidGhvbWFzaGFybmVyIiwiYSI6ImNpc2c3cGNwcTAxczUyeW52bGo2bWc3c2cifQ.Nt2v3vP4lisWYxZ6hXgHyQ'
+        
+}).addTo(map);
+    
+    
+    
     
     getData(map);
     
@@ -290,7 +299,7 @@ function createFilterMenu(map, data,attributes) {
             var container = L.DomUtil.create('div','menu-ui');
             
             // Set the HTML for the menu interface
-            container.innerHTML = "<a href='#' class='active' data-filter='all'>Show all</a> <a href='#' data-filter='NL West'>" + divisions[0] + "</a><a href='#' data-filter='NL East'>" + divisions[1] + "</a> <a href='#' data-filter='AL East'>" + divisions[2] + "</a> <a href = '#' data-filter='NL Central'>" + divisions[3] + "</a> <a href = '#' data-filter='AL Central'>" + divisions[4] + "</a> <a href = '#' data-filter='AL West'>" + divisions[5] + "</a>";
+            container.innerHTML = "<b href = '#'>Filter by Division</b><a href='#' class='active' data-filter='all'>Show all</a> <a href='#' data-filter='NL West'>" + divisions[0] + "</a><a href='#' data-filter='NL East'>" + divisions[1] + "</a> <a href='#' data-filter='AL East'>" + divisions[2] + "</a> <a href = '#' data-filter='NL Central'>" + divisions[3] + "</a> <a href = '#' data-filter='AL Central'>" + divisions[4] + "</a> <a href = '#' data-filter='AL West'>" + divisions[5] + "</a>";
             return container;
         }
         
@@ -365,7 +374,7 @@ function createLegend(map, attributes) {
             $(container).append('<div id="temporal-legend">');
             
             
-            var svg = '<svg id="attribute-legend" width="160px" height="60px">';       
+            var svg = '<svg id="attribute-legend" width="160px" height="75px">';       
             
             // circle array of object properties to help design legend text
             var circles = {

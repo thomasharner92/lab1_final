@@ -1,22 +1,36 @@
 /* Created by Thomas Harner */
 
 .menu-ui {
+  font-family: Candara,sans-serif;
+  width: 150px;
+  height: 160px;
   background:#fff;
+  background-color: rgba(255,255,255,0.8);
   position:absolute;
-  top:10px;right:10px;
+  top:10px;right:40px;
+  padding: 15px;
+  line-height: 12px; 
+  text-align: center;
+  border: solid gray 1px;
   z-index:1;
   border-radius:3px;
   width:120px;
   border:1px solid rgba(0,0,0,0.4);
   }
-  .menu-ui a {
-    font-size:13px;
+.menu-ui b {
+    font-size: 15px;
+    text-align: center;
+    line-height: 10px;
+    
+}
+.menu-ui a {
+    font-size:15px;
     color:#404040;
     display:block;
-    margin:0;padding:0;
-    padding:10px;
+    margin:0;
+    padding:5px;
     text-decoration:none;
-    border-bottom:1px solid rgba(0,0,0,0.25);
+    border-bottom:1px dotted rgba(0,0,0,0.25);
     text-align:center;
     }
     .menu-ui a:first-child {
@@ -32,7 +46,7 @@
       }
     .menu-ui a.active,
     .menu-ui a.active:hover {
-      background:#3887BE;
+      background:#FF8C00;
       color:#FFF;
       }
 
@@ -46,16 +60,16 @@
     text-align: center;
     margin: 0.2em 0;
 }
-/*
-#panel {
-    width: 20%;
-    padding: 20px;
-    display: inline-block;
-    vertical-align: top;
+
+.header {
+    font-family: Candara,sans-serif;
+    height: 25px;
+    font-size: 15px;
+    line-height: 5px;
+    padding-bottom: 20px;
     text-align: center;
-    line-height: 42px;
+
 }
-*/
 
 .sequence-control-container {
     width: 350px;
@@ -71,26 +85,15 @@
 
 .legend-control-container {
     width: 200px;
-    height: 100px;
+    height: 80px;
+    top: 5px;
     font-size: 15px;
+    font-family: Candara,sans-serif;
     background-color: rgba(255,255,255,0.8);
     padding: 10px;
-    line-height: 15px;
+    line-height: 5px;
     text-align: center;
     border: solid gray 1px;
-}
-
-.menu-ui {
-    width: 150px;
-    height: 210px;
-    font-size: 10px;
-    background-color: rgba(255,255,255,0.8);
-    padding: 10px;
-    line-height: 10px;
-    text-align: center;
-    border: solid gray 1px;
-    
-    
 }
 
 .range-slider {
